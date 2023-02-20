@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Favourites = () => {
-  const preferiti = useSelector((state) => state.preferred.preferiti);
+  const preferiti = useSelector((state) => state.favourites.preferiti);
   const navigate = useNavigate();
 
   return (

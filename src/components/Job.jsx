@@ -2,9 +2,9 @@ import { Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {
-  addJobToPreferred,
+  addJobToFavourites,
   ADD_PREFERRED_COMPANY,
-  removeJobToPreferred,
+  removeJobToFavourites,
   REMOVE_PREFERRED_COMPANY,
 } from "../redux/actions";
 
@@ -27,13 +27,13 @@ const Job = ({ data }) => {
       <Col xs={3}>
         <Button
           className="btn-primary my-2"
-          onClick={() => dispatch(addJobToPreferred(data))}
+          onClick={() => dispatch(addJobToFavourites(data))}
         >
           Aggiungi a preferiti
         </Button>
         <Button
           className="btn-danger my-2"
-          onClick={() => dispatch(removeJobToPreferred(data))}
+          onClick={() => dispatch(removeJobToFavourites(data))}
         >
           Rimuovi dai preferiti
         </Button>
